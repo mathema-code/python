@@ -19,7 +19,7 @@ def prints_hello():
     expected = "[Hh]ello, world!?\n"
     actual = check50.run("python3 hello.py").stdout()
     if not match(expected, actual):
-        help = 'nao foi printado o esperado'
+        help = 'verifique se você escreveu "hello, world!?" corretamente.'
         if match(expected[:-1], actual):
             help = r"did you forget a newline ('\n') at the end of your printf string?"
         raise check50.Mismatch("hello, world\n", actual, help=help)
