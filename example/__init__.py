@@ -9,7 +9,7 @@ def exists():
 
 @check50.check()
 def imprime_algo():
-    """"""
+    """Verificando se sua função imprime algum resultado"""
     actual = check50.run("python3 hello.py").stdout()
     if not actual:
         help = 'parece que seu programa nao printa nada, você está invocando usa função?'
