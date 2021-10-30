@@ -19,14 +19,14 @@ def imprime_algo():
 
 @check50.check(imprime_algo)
 def prints_hello():
-    """printar "hello, world!?\\n" """
+    """printar "olá, mundo!" """
     from re import match
 
-    expected = "[Hh]ello, world!?\n"
+    expected = "[Oo]lá, mundo!"
     actual = check50.run("python3 hello.py").stdout()
     if not match(expected, actual):
-        help = 'verifique se você escreveu "hello, world!?\\n" corretamente.'
+        help = 'verifique se você escreveu "olá, mundo" corretamente.'
         if match(expected[:-1], actual):
             help = r"Você esqueceu uma nova linha ('\n') no final da sua string?"
-        raise mismatch(repr("hello, world\n"), repr(actual), help=help)
+        raise mismatch(repr('olá, mundo!'), repr(actual), help=help)
         # raise check50.Mismatch("hello, world\n", actual, help=help)n
