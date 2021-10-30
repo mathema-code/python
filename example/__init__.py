@@ -8,7 +8,7 @@ def exists():
 
 @check50.check(exists)
 def prints_hello():
-    """prints "hello, world\\n" """
+    """printar "hello, world\\n" """
     from re import match
 
     expected = "[Hh]ello, world!?\n"
