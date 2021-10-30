@@ -1,7 +1,7 @@
 import check50
 
 def mismatch(expect, actual, help):
-    return check50.Failure(f'esperávamos "{expect}", e não "{actual}"', help=help)
+    return check50.Failure(fr'esperávamos "{expect}", e não "{actual}"', help=help)
 
 @check50.check()
 def exists():
