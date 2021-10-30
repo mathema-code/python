@@ -11,9 +11,9 @@ def exists():
 def imprime_algo():
     """Verificando se sua função imprime algum resultado"""
     actual = check50.run("python3 hello.py").stdout()
+    help = 'parece que seu programa nao printa nada, você está invocando usa função?'
     if not actual:
-        help = 'parece que seu programa nao printa nada, você está invocando usa função?'
-    raise check50.Failure('Esperávamos outro resultado', help=help)
+        raise check50.Failure('Esperávamos outro resultado', help=help)
 
 @check50.check(exists)
 def prints_hello():
