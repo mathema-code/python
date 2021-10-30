@@ -28,5 +28,5 @@ def prints_hello():
         help = 'verifique se você escreveu "hello, world!?\\n" corretamente.'
         if match(expected[:-1], actual):
             help = r"Você esqueceu uma nova linha ('\n') no final da sua string?"
-        raise mismatch(r"hello, world\n", actual, help=help)
+        raise mismatch(r"hello, world\n", repr(actual), help=help)
         # raise check50.Mismatch("hello, world\n", actual, help=help)n
