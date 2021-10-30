@@ -13,7 +13,7 @@ def imprime_algo():
     actual = check50.run("python3 hello.py").stdout()
     if not actual:
         help = 'parece que seu programa nao printa nada, você está invocando usa função?'
-    raise check50.Mismatch(help=help)
+    raise check50.Failure('Esperávamos outro resultado', help=help)
 
 @check50.check(exists)
 def prints_hello():
