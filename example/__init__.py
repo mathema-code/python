@@ -1,5 +1,7 @@
 import check50
 
+arquivo = 'ola.py'
+
 def mismatch(expect, actual, help):
     return check50.Failure(fr'esperávamos {expect}, e não {actual}', help=help)
 
@@ -12,7 +14,7 @@ def exists():
 @check50.check(exists)
 def imprime_algo():
     """Verificando se sua função imprime algum resultado"""
-    actual = check50.run("python3 ola.py").stdout()
+    actual = check50.run(f"python3 {arquivo}").stdout()
     help = 'parece que seu programa nao printa nada, você está invocando usa função?'
     if not actual:
         raise check50.Failure('esperávamos outro resultado', help=help)
@@ -23,7 +25,7 @@ def prints_hello():
     from re import match
 
     expected = "[Oo]lá, mundo!"
-    actual = check50.run("python3 hello.py").stdout()
+    actual = check50.run(f"python3 {arquivo}").stdout()
     if not match(expected, actual):
         help = 'verifique se você escreveu "olá, mundo" corretamente.'
         if match(expected[:-1], actual):
