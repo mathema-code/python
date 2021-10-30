@@ -1,7 +1,7 @@
 import check50
 
 def mismatch(expect, actual, help):
-    return check50.Failure(fr'esperávamos "{expect}", e não "{actual}"', help=help)
+    return check50.Failure(fr'esperávamos {expect}, e não {actual}', help=help)
 
 @check50.check()
 def exists():
@@ -28,5 +28,5 @@ def prints_hello():
         help = 'verifique se você escreveu "hello, world!?\\n" corretamente.'
         if match(expected[:-1], actual):
             help = r"Você esqueceu uma nova linha ('\n') no final da sua string?"
-        raise mismatch(r"hello, world\n", repr(actual), help=help)
+        raise mismatch(repr("hello, world\n"), repr(actual), help=help)
         # raise check50.Mismatch("hello, world\n", actual, help=help)n
