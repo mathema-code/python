@@ -1,7 +1,7 @@
 import check50
 
 def mismatch(expect, actual, help):
-    return check50.Failure('esperávamos "{expect}", e não "{actual}"', help=help)
+    return check50.Failure(f'esperávamos "{expect}", e não "{actual}"', help=help)
 
 @check50.check()
 def exists():
@@ -19,7 +19,7 @@ def imprime_algo():
 
 @check50.check(imprime_algo)
 def prints_hello():
-    """printar "hello, world\\n" """
+    """printar "hello, world!?\\n" """
     from re import match
 
     expected = "[Hh]ello, world!?\n"
@@ -29,4 +29,4 @@ def prints_hello():
         if match(expected[:-1], actual):
             help = r"Você esqueceu uma nova linha ('\n') no final da sua string?"
         raise mismatch("hello, world\n", actual, help=help)
-        # raise check50.Mismatch("hello, world\n", actual, help=help)
+        # raise check50.Mismatch("hello, world\n", actual, help=help)n
