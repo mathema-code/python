@@ -1,5 +1,7 @@
-from typing import ChainMap
 import check50
+
+def mismatch(expect, actual, help):
+    return f'esperávamos "{expect}", e não "{actual}" \n{help}'
 
 @check50.check()
 def exists():
@@ -13,7 +15,7 @@ def imprime_algo():
     actual = check50.run("python3 hello.py").stdout()
     help = 'parece que seu programa nao printa nada, você está invocando usa função?'
     if not actual:
-        raise check50.Failure('Esperávamos outro resultado', help=help)
+        raise check50.Failure('esperávamos outro resultado', help=help)
 
 @check50.check(exists)
 def prints_hello():
@@ -25,5 +27,6 @@ def prints_hello():
     if not match(expected, actual):
         help = 'verifique se você escreveu "hello, world!?\\n" corretamente.'
         if match(expected[:-1], actual):
-            help = r"did you forget a newline ('\n') at the end of your printf string?"
-        raise check50.Mismatch("hello, world\n", actual, help=help)
+            help = r"Você esqueceu uma nova linha ('\n') no final da sua string?"
+        raise mismatch("hello, world\n", actual, help=help)
+        # raise check50.Mismatch("hello, world\n", actual, help=help)
