@@ -7,7 +7,7 @@ def mismatch(expect, actual, help):
 
 @check50.check()
 def exists():
-    """Verificando se existe o arquivo ola.py"""
+    f"""Verificando se existe o arquivo {arquivo}.py"""
     check50.exists(arquivo)
 
 
