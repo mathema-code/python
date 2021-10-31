@@ -2,16 +2,16 @@
 
 ## Tarefa
 
-O código fornecido lê dois números inteiros $a$ e $b$. Crie um código para imprimir linhas de código onde:
+O código fornecido lê dois números inteiros `a` e `b`. Crie um código para imprimir linhas de código onde:
 
-1. A primeira linha imprime o resultado da soma dos dois números representados por $a$ e $b$.
-2. A segunda linha imprime o resultado da subtracão dos dois números representados por $a$ e $b$.
-3. A terceira linha imprime o resultado da subtracao dos dois números representados por $a$ e $b$.
+1. A primeira linha imprime o resultado da soma dos dois números representados por `a` e `b`.
+2. A segunda linha imprime o resultado da subtracão dos dois números representados por `a` e `b`.
+3. A terceira linha imprime o resultado da subtracao dos dois números representados por `a` e `b`.
 
 ## Exemplo
 
-$a = 10$
-$b = 5$
+`a = 10`
+`b = 5`
 
 Imprime o seguinte resultado:
 
@@ -23,6 +23,6 @@ Imprime o seguinte resultado:
 
 ### Explicao 
 
-$10 + 5 = 15$
-$10 - 5 = 5$
-$10 * 5 = 50$
+`10 + 5 = 15`
+`10 - 5 = 5`
+`10 * 5 = 50`
