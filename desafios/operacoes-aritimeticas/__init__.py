@@ -14,7 +14,7 @@ def exists():
 @check50.check(exists)
 def imprime_algo():
     """Verificando se sua função imprime algum resultado"""
-    actual = check50.run(f"python3 {arquivo}").stdin().stdout()
+    actual = check50.run(f"python3 {arquivo}").stdin('5 7').stdout()
     help = 'parece que seu programa nao printa nada, você está invocando usa função?'
     if not actual:
         raise check50.Failure('esperávamos outro resultado', help=help)
