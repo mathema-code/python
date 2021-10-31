@@ -15,7 +15,7 @@ def exists():
 @check50.check(exists)
 def imprime_algo():
     """Verificando seu stdout"""
-    actual = check50.run(f"python3 {arquivo}").stdout()
+    actual = check50.run(f"python3 {arquivo}").stdin(5).stdout()
     check50.log(actual)
 
 @check50.check(imprime_algo)
