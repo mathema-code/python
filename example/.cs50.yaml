@@ -1,3 +1,7 @@
-check50: true
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require ola.py
 
-submit50: true
+submit50:
+  files: *check50_files
