@@ -24,4 +24,4 @@ def imprime_algo():
 def prints_hello():
     """Verificando se as operações fornecem o resuldado correto"""
 
-    check50.run(f"python3 {arquivo}").stdin("foo").stdout("foo").stdin("bar").stdout("bar")
+    check50.run(f"python3 {arquivo}").stdin("foo").stdout("foo")
