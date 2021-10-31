@@ -13,15 +13,16 @@ def exists():
 
 
 @check50.check(exists)
-def imprime_algo():
+def checagem():
     """Verificando seu stdout"""
-    actual = check50.run(f"python3 {arquivo}").stdin('5').stdout()
+    actual = check50.run(f"python3 {arquivo}").stdin('10 5').stdout()
     check50.log('')
     check50.log('abaixo é o print do seu programa')
     check50.log(actual)
 
-@check50.check(imprime_algo)
+@check50.check(exists)
 def prints_hello():
     """Verificando se as operações fornecem o resuldado correto"""
 
-    check50.run(f"python3 {arquivo}").stdin("foo").stdout("foo")
+    actual = check50.run(f"python3 {arquivo}").stdin('10 5').exit(15)
+    check50.log(actual)
