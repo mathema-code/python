@@ -9,6 +9,7 @@ def mismatch(expect, actual, help):
 def exists():
     f"""Verificando se existe o arquivo {arquivo}.py"""
     check50.exists(arquivo)
+    check50.log(f"Parabéns o arquivo {arquivo} foi criado com sucesso!")
 
 
 @check50.check(exists)
