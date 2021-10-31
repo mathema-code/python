@@ -24,7 +24,7 @@ def checagem():
 def prints_hello():
     """Verificando se as operações fornecem o resuldado correto"""
 
-    code = check50.run(f"python3 {arquivo}").stdin('10 5').exit()
-    if code != 15:
-        raise check50.Failure(f"expected exit code 15, not {code}")
+    code = check50.run(f"python3 {arquivo}").stdin('10 5').stdout()
+    if code != '15':
+        raise check50.Failure(f"oi.. o exit code foi 15, not {code}")
     check50.log(code)
